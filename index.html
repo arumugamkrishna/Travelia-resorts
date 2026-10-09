@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAVELIA RESORTS | Escape. Relax. Experience.</title>
+  <meta name="description" content="Discover world-class luxury at Travelia Resorts. Experience bespoke hospitality, breathtaking destinations, and lavish accommodations.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-crest.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Travelia Resorts Home">
+        <div class="logo-crest">T</div>
+        <div class="logo-text">
+          <span class="logo-title">TRAVELIA</span>
+          <span class="logo-subtitle">RESORTS</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="rooms.html" class="nav-link">Rooms</a>
+        <a href="destinations.html" class="nav-link">Destinations</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="booking.html" class="nav-link">Booking</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#" class="nav-link logout-trigger" style="color: #ff9e9e;">Logout</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-user-badge">
+          <span class="user-avatar-dot"></span>
+          <span class="nav-user-name">Admin User</span>
+        </div>
+        <a href="#" class="nav-btn-logout logout-trigger">Logout</a>
+      </div>
+
+      <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">✦ The World's Premier Retreats ✦</div>
+      <h1 class="hero-title">TRAVELIA RESORTS</h1>
+      <p class="hero-tagline">“Escape. Relax. Experience.”</p>
+      <p class="hero-description">
+        Immerse yourself in untouched coastal sanctuaries, private mountain chalets, and tropical overwater villas curated for pure rejuvenation and unforgettable luxury.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="rooms.html" class="btn btn-primary">Explore Rooms</a>
+        <a href="booking.html" class="btn btn-outline-light">Book Your Stay</a>
+      </div>
+
+      <!-- Quick Booking Search Strip -->
+      <form class="quick-booking-bar" action="booking.html" method="GET">
+        <div class="quick-input-box">
+          <label for="quickCheckIn">Check-In</label>
+          <input type="date" id="quickCheckIn" name="checkIn" required>
+        </div>
+        <div class="quick-input-box">
+          <label for="quickCheckOut">Check-Out</label>
+          <input type="date" id="quickCheckOut" name="checkOut" required>
+        </div>
+        <div class="quick-input-box">
+          <label for="quickRoom">Room Type</label>
+          <select id="quickRoom" name="room">
+            <option value="Deluxe Room">Deluxe Room</option>
+            <option value="Ocean View Suite">Ocean View Suite</option>
+            <option value="Private Villa">Private Villa</option>
+            <option value="Family Suite">Family Suite</option>
+          </select>
+        </div>
+        <div class="quick-input-box">
+          <label for="quickGuests">Guests</label>
+          <select id="quickGuests" name="guests">
+            <option value="1 Adult">1 Adult</option>
+            <option value="2 Adults" selected>2 Adults</option>
+            <option value="3 Adults">3 Adults</option>
+            <option value="4+ Adults / Family">Family (4+ Guests)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Check Availability</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="section-padding bg-sand">
+    <div class="container">
+      <div class="welcome-grid">
+        <div class="welcome-images reveal">
+          <img src="assets/images/hero.jpg" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80'" alt="Travelia Resorts Infinity Pool" class="welcome-img-main">
+          <div class="welcome-img-badge">
+            <div class="badge-num">15+</div>
+            <div class="badge-text">Years of Excellence</div>
+          </div>
+        </div>
+
+        <div class="welcome-text reveal">
+          <span class="section-tag">Welcome to Travelia Resorts</span>
+          <h2 class="section-title">A Symphony of Elegance & Serenity</h2>
+          <p class="section-desc text-left" style="margin-left: 0; margin-bottom: 20px;">
+            At Travelia Resorts, we believe vacationing should transcend mere travel. From tranquil azure seas to pristine alpine landscapes, our private properties offer an unparalleled sanctuary where time slows down and genuine hospitality awakens.
+          </p>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+            Indulge in private infinity pools, world-class gastronomic journeys orchestrated by Michelin-starred culinary masters, and bespoke wellness treatments rooted in age-old traditions.
+          </p>
+
+          <div class="features-check-list">
+            <div class="check-item"><span class="check-icon">✓</span> 100% Ocean & Nature Facing</div>
+            <div class="check-item"><span class="check-icon">✓</span> 24/7 Dedicated Butler Service</div>
+            <div class="check-item"><span class="check-icon">✓</span> Michelin-Standard Dining</div>
+            <div class="check-item"><span class="check-icon">✓</span> Eco-Certified Sustainable Architecture</div>
+          </div>
+
+          <a href="about.html" class="btn btn-dark">Discover Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Rooms Section -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Accommodations</span>
+        <h2 class="section-title">Featured Rooms & Suites</h2>
+        <p class="section-desc">Handcrafted interiors, plush organic linens, and breathtaking panoramic vistas designed for deep restorative rest.</p>
+      </div>
+
+      <div class="grid-4">
+        <!-- Room 1 -->
+        <div class="room-card reveal">
+          <div class="room-image-wrap">
+            <img src="assets/images/deluxe-room.jpg" onerror="this.src='https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80'" alt="Deluxe Room">
+            <span class="room-badge">Popular</span>
+            <div class="room-price-tag">₹5,999 <span>/night</span></div>
+          </div>
+          <div class="room-card-body">
+            <h3 class="room-card-title">Deluxe Room</h3>
+            <p class="room-card-desc">An oasis of calm featuring teak accents, rainfall shower, and a private garden terrace.</p>
+            <div class="room-specs">
+              <div class="spec-item"><span class="spec-icon">👥</span> 2 Guests</div>
+              <div class="spec-item"><span class="spec-icon">📐</span> 450 sq.ft</div>
+              <div class="spec-item"><span class="spec-icon">🛏️</span> King Bed</div>
+            </div>
+            <div class="room-facilities">
+              <span class="facility-pill">High-Speed Wi-Fi</span>
+              <span class="facility-pill">Garden View</span>
+              <span class="facility-pill">Breakfast Included</span>
+            </div>
+            <div class="room-card-actions">
+              <button class="btn btn-outline-gold btn-sm" onclick="viewRoomDetails('Deluxe Room')">View Details</button>
+              <button class="btn btn-primary btn-sm book-room-btn" data-room="Deluxe Room" onclick="bookThisRoom('Deluxe Room')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="room-card reveal">
+          <div class="room-image-wrap">
+            <img src="assets/images/ocean-suite.jpg" onerror="this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80'" alt="Ocean View Suite">
+            <span class="room-badge">Best Seller</span>
+            <div class="room-price-tag">₹9,999 <span>/night</span></div>
+          </div>
+          <div class="room-card-body">
+            <h3 class="room-card-title">Ocean View Suite</h3>
+            <p class="room-card-desc">Spectacular wraparound floor-to-ceiling glass balconies overlooking the shimmering turquoise sea.</p>
+            <div class="room-specs">
+              <div class="spec-item"><span class="spec-icon">👥</span> 2-3 Guests</div>
+              <div class="spec-item"><span class="spec-icon">📐</span> 720 sq.ft</div>
+              <div class="spec-item"><span class="spec-icon">🛏️</span> Cal-King Bed</div>
+            </div>
+            <div class="room-facilities">
+              <span class="facility-pill">Panoramic Ocean</span>
+              <span class="facility-pill">Jacuzzi Tub</span>
+              <span class="facility-pill">Butler Service</span>
+            </div>
+            <div class="room-card-actions">
+              <button class="btn btn-outline-gold btn-sm" onclick="viewRoomDetails('Ocean View Suite')">View Details</button>
+              <button class="btn btn-primary btn-sm book-room-btn" data-room="Ocean View Suite" onclick="bookThisRoom('Ocean View Suite')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="room-card reveal">
+          <div class="room-image-wrap">
+            <img src="assets/images/private-villa.jpg" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80'" alt="Private Villa">
+            <span class="room-badge">Ultra Luxury</span>
+            <div class="room-price-tag">₹14,999 <span>/night</span></div>
+          </div>
+          <div class="room-card-body">
+            <h3 class="room-card-title">Private Villa</h3>
+            <p class="room-card-desc">Standalone sanctuary with heated infinity plunge pool, outdoor rain garden, and private beach gate.</p>
+            <div class="room-specs">
+              <div class="spec-item"><span class="spec-icon">👥</span> 4 Guests</div>
+              <div class="spec-item"><span class="spec-icon">📐</span> 1350 sq.ft</div>
+              <div class="spec-item"><span class="spec-icon">🛏️</span> 2 Master Beds</div>
+            </div>
+            <div class="room-facilities">
+              <span class="facility-pill">Private Pool</span>
+              <span class="facility-pill">Direct Beach</span>
+              <span class="facility-pill">Chef On-Call</span>
+            </div>
+            <div class="room-card-actions">
+              <button class="btn btn-outline-gold btn-sm" onclick="viewRoomDetails('Private Villa')">View Details</button>
+              <button class="btn btn-primary btn-sm book-room-btn" data-room="Private Villa" onclick="bookThisRoom('Private Villa')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 4 -->
+        <div class="room-card reveal">
+          <div class="room-image-wrap">
+            <img src="assets/images/family-suite.jpg" onerror="this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80'" alt="Family Suite">
+            <span class="room-badge">Spacious</span>
+            <div class="room-price-tag">₹11,999 <span>/night</span></div>
+          </div>
+          <div class="room-card-body">
+            <h3 class="room-card-title">Family Suite</h3>
+            <p class="room-card-desc">Interconnected master suites, kid-friendly entertainment zone, dual vanity en-suites, and sun deck.</p>
+            <div class="room-specs">
+              <div class="spec-item"><span class="spec-icon">👥</span> 4-6 Guests</div>
+              <div class="spec-item"><span class="spec-icon">📐</span> 950 sq.ft</div>
+              <div class="spec-item"><span class="spec-icon">🛏️</span> 1 King + 2 Twin</div>
+            </div>
+            <div class="room-facilities">
+              <span class="facility-pill">Lagoon View</span>
+              <span class="facility-pill">Living Lounge</span>
+              <span class="facility-pill">Game Console</span>
+            </div>
+            <div class="room-card-actions">
+              <button class="btn btn-outline-gold btn-sm" onclick="viewRoomDetails('Family Suite')">View Details</button>
+              <button class="btn btn-primary btn-sm book-room-btn" data-room="Family Suite" onclick="bookThisRoom('Family Suite')">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 50px;">
+        <a href="rooms.html" class="btn btn-dark">View All Accommodations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Destinations Section -->
+  <section class="section-padding bg-sand">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Destinations</span>
+        <h2 class="section-title">Popular Escapes</h2>
+        <p class="section-desc">Experience our signature hospitality in world-renowned idyllic getaways from tropical archipelagos to alpine summits.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Destination 1 -->
+        <div class="destination-card reveal" onclick="location.href='destinations.html'">
+          <img src="assets/images/maldives.jpg" onerror="this.src='https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80'" alt="Maldives" class="destination-card-bg">
+          <div class="destination-overlay">
+            <span class="destination-location-tag">Indian Ocean</span>
+            <h3 class="destination-title">Maldives</h3>
+            <p class="destination-desc">Private overwater stilt villas, coral reef lagoons, and luminescent bioluminescent shorelines.</p>
+            <div class="destination-btn-wrap">
+              <span class="btn btn-outline-light btn-sm">Explore Escape</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 2 -->
+        <div class="destination-card reveal" onclick="location.href='destinations.html'">
+          <img src="assets/images/bali.jpg" onerror="this.src='https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80'" alt="Bali" class="destination-card-bg">
+          <div class="destination-overlay">
+            <span class="destination-location-tag">Indonesia</span>
+            <h3 class="destination-title">Bali</h3>
+            <p class="destination-desc">Sacred rainforest ravines, emerald rice terrace sanctuaries, and authentic Balinese healing pavilions.</p>
+            <div class="destination-btn-wrap">
+              <span class="btn btn-outline-light btn-sm">Explore Escape</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 3 -->
+        <div class="destination-card reveal" onclick="location.href='destinations.html'">
+          <img src="assets/images/switzerland.jpg" onerror="this.src='https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80'" alt="Switzerland" class="destination-card-bg">
+          <div class="destination-overlay">
+            <span class="destination-location-tag">Europe</span>
+            <h3 class="destination-title">Switzerland</h3>
+            <p class="destination-desc">Snow-capped peaks, fireside alpine chalets, world-class ski slopes, and crystalline glacial lakes.</p>
+            <div class="destination-btn-wrap">
+              <span class="btn btn-outline-light btn-sm">Explore Escape</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 40px;">
+        <a href="destinations.html" class="btn btn-primary">Discover All 6 Destinations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resort Facilities Section -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Facilities & Amenities</span>
+        <h2 class="section-title">Designed for Your Bliss</h2>
+        <p class="section-desc">Every element of our resort is curated to foster tranquility, rejuvenation, and memorable culinary moments.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="service-card reveal">
+          <div class="service-icon-box">🏊‍♂️</div>
+          <h3 class="service-title">Swimming Pool</h3>
+          <p class="service-desc">Multi-tiered infinity pools overlooking ocean sunsets with temperature control and submerged loungers.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon-box">🍽️</div>
+          <h3 class="service-title">Luxury Restaurant</h3>
+          <p class="service-desc">Chef-crafted tasting menus highlighting organic ingredients, fine wines, and intimate beachfront seating.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon-box">🌿</div>
+          <h3 class="service-title">Spa & Wellness</h3>
+          <p class="service-desc">Holistic Ayurvedic therapies, aromatherapies, and steam rooms designed to replenish body and mind.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon-box">🚗</div>
+          <h3 class="service-title">Airport Pickup</h3>
+          <p class="service-desc">Chauffeured luxury vehicles and private speedboat/seaplane transfers from airport to resort door.</p>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 40px;">
+        <a href="services.html" class="btn btn-dark">View All Resort Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Offers Section -->
+  <section class="section-padding bg-primary">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag" style="color: var(--color-gold-light);">Limited Privileges</span>
+        <h2 class="section-title light">Exclusive Seasonal Offers</h2>
+        <p class="section-desc light">Unlock special benefits, complimentary resort credits, and bespoke honeymoon perks for early bookings.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Offer 1 -->
+        <div class="offer-card reveal">
+          <div>
+            <span class="offer-badge">Romantic Getaway</span>
+            <h3 class="offer-title">Honeymoon Serenade</h3>
+            <div class="offer-discount">30% OFF</div>
+            <p class="offer-desc">Includes champagne breakfast in bed, a private sunset yacht cruise, and a couple's aromatic massage.</p>
+            <div class="offer-code">Use Code: <strong>HONEYMOON30</strong></div>
+          </div>
+          <a href="booking.html" class="btn btn-primary btn-sm">Claim Privilege</a>
+        </div>
+
+        <!-- Offer 2 -->
+        <div class="offer-card reveal">
+          <div>
+            <span class="offer-badge">Summer Advance</span>
+            <h3 class="offer-title">Early Bird Escape</h3>
+            <div class="offer-discount">20% OFF</div>
+            <p class="offer-desc">Reserve your 2026 vacation 45 days in advance and receive complimentary gourmet half-board dining.</p>
+            <div class="offer-code">Use Code: <strong>EARLYBIRD20</strong></div>
+          </div>
+          <a href="booking.html" class="btn btn-primary btn-sm">Claim Privilege</a>
+        </div>
+
+        <!-- Offer 3 -->
+        <div class="offer-card reveal">
+          <div>
+            <span class="offer-badge">Weekend Retreat</span>
+            <h3 class="offer-title">Extended Weekend</h3>
+            <div class="offer-discount">15% OFF</div>
+            <p class="offer-desc">Stay 3 nights, pay for 2. Includes late 4:00 PM check-out and ₹3,000 resort dining credit.</p>
+            <div class="offer-code">Use Code: <strong>WEEKEND15</strong></div>
+          </div>
+          <a href="booking.html" class="btn btn-primary btn-sm">Claim Privilege</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section-padding bg-sand">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">The Travelia Distinction</span>
+        <h2 class="section-title">Why Choose Travelia Resorts</h2>
+        <p class="section-desc">We elevate every touchpoint of your vacation, weaving unforgettable memories and personalized attention.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="feature-box reveal">
+          <div class="feature-box-icon">🏝️</div>
+          <div>
+            <h3 class="feature-box-title">Iconic Scenic Locations</h3>
+            <p class="feature-box-desc">Every resort property is nestled in a breathtaking, secluded geographical wonder ensuring absolute privacy and peace.</p>
+          </div>
+        </div>
+
+        <div class="feature-box reveal">
+          <div class="feature-box-icon">🛎️</div>
+          <div>
+            <h3 class="feature-box-title">Personal Butler & Concierge</h3>
+            <p class="feature-box-desc">Your dedicated concierge arranges customized excursions, private dining setups, and attends to your slightest preference.</p>
+          </div>
+        </div>
+
+        <div class="feature-box reveal">
+          <div class="feature-box-icon">⭐</div>
+          <div>
+            <h3 class="feature-box-title">World-Class Gastronomy</h3>
+            <p class="feature-box-desc">Internationally acclaimed chefs curate seasonal, locally harvested gastronomic masterpieces paired with vintage wines.</p>
+          </div>
+        </div>
+
+        <div class="feature-box reveal">
+          <div class="feature-box-icon">🌿</div>
+          <div>
+            <h3 class="feature-box-title">Sustainable Eco-Luxury</h3>
+            <p class="feature-box-desc">Committed to protecting our pristine ecosystems with zero single-use plastics, solar energy, and local coral conservation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guest Reviews Section -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Guest Experiences</span>
+        <h2 class="section-title">Words from Our Valued Guests</h2>
+        <p class="section-desc">Over 20,000 discerning travelers have made Travelia Resorts their cherished home away from home.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Review 1 -->
+        <div class="review-card reveal">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “Our private villa in the Maldives surpassed our wildest dreams. Waking up to the azure water and having our butler prepare breakfast right on the sundeck was pure heaven.”
+            </p>
+          </div>
+          <div class="review-guest">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Elena Rostova" class="guest-avatar">
+            <div class="guest-info">
+              <h4>Elena Rostova</h4>
+              <span>Stayed at Maldives Resort</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card reveal">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “The hospitality in Bali is unmatched anywhere in the world. The Ayurvedic spa rejuvenated both my wife and me. Every staff member treated us like royalty.”
+            </p>
+          </div>
+          <div class="review-guest">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Marcus Vance" class="guest-avatar">
+            <div class="guest-info">
+              <h4>Marcus Vance</h4>
+              <span>Stayed at Bali Sanctuary</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card reveal">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “Switzerland in winter was straight out of a fairy tale! Coming back to the warm fireplace and Michelin-star fondue after skiing was an unforgettable high point.”
+            </p>
+          </div>
+          <div class="review-guest">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Aarohi Sharma" class="guest-avatar">
+            <div class="guest-info">
+              <h4>Aarohi Sharma</h4>
+              <span>Stayed at Swiss Alpine Chalet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Booking Section -->
+  <section class="section-padding bg-primary" style="text-align: center; background-image: radial-gradient(circle at center, rgba(197, 160, 89, 0.15) 0%, transparent 70%);">
+    <div class="container reveal">
+      <span class="section-tag" style="color: var(--color-gold-light);">Your Sanctuary Awaits</span>
+      <h2 class="section-title light">Ready for Your Dream Vacation?</h2>
+      <p class="section-desc light">
+        Book direct with Travelia Resorts to enjoy our best-rate guarantee, complimentary champagne welcome, and priority early check-in.
+      </p>
+      <div style="display: flex; gap: 18px; justify-content: center; flex-wrap: wrap;">
+        <a href="booking.html" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">Book Your Stay Now</a>
+        <a href="contact.html" class="btn btn-outline-light" style="padding: 16px 36px; font-size: 1.05rem;">Speak with Concierge</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-crest">T</div>
+            <div class="logo-text">
+              <span class="logo-title">TRAVELIA</span>
+              <span class="logo-subtitle">RESORTS</span>
+            </div>
+          </a>
+          <p class="footer-tagline">“Escape. Relax. Experience.”</p>
+          <p class="footer-desc">
+            A bespoke collection of international luxury sanctuaries, offering timeless architecture, restorative wellness, and authentic hospitality across the globe.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+            <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+            <a href="#" class="social-icon" aria-label="Twitter">X</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms & Suites</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Services & Facilities</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Experiences -->
+        <div>
+          <h4 class="footer-title">Accommodations</h4>
+          <ul class="footer-links">
+            <li><a href="rooms.html">Deluxe Room</a></li>
+            <li><a href="rooms.html">Ocean View Suite</a></li>
+            <li><a href="rooms.html">Private Villa</a></li>
+            <li><a href="rooms.html">Family Suite</a></li>
+            <li><a href="booking.html">Direct Reservations</a></li>
+            <li><a href="#" class="logout-trigger">Member Logout</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="footer-contact-icon">📍</span>
+              <span>Travelia Bay Boulevard, Seaside Promenade, Goa & Worldwide</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">📞</span>
+              <span>+91 98765 43210 / 1800 233 4567</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">✉️</span>
+              <span>reservations@traveliaresorts.com</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">⏰</span>
+              <span>24/7 Front Desk & Concierge Service</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> Travelia Resorts. All Rights Reserved.</div>
+        <div>
+          <span>Privacy Policy</span> &bull; 
+          <span>Terms & Conditions</span> &bull; 
+          <span>Luxury Hospitality Standards</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

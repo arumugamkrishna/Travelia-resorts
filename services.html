@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Amenities | TRAVELIA RESORTS</title>
+  <meta name="description" content="Immerse in unparalleled luxury at Travelia Resorts. World-class infinity pools, Michelin dining, holistic wellness spas, chauffeured airport pickups, and 24/7 room service.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-crest.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Travelia Resorts Home">
+        <div class="logo-crest">T</div>
+        <div class="logo-text">
+          <span class="logo-title">TRAVELIA</span>
+          <span class="logo-subtitle">RESORTS</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="rooms.html" class="nav-link">Rooms</a>
+        <a href="destinations.html" class="nav-link">Destinations</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="booking.html" class="nav-link">Booking</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#" class="nav-link logout-trigger" style="color: #ff9e9e;">Logout</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-user-badge">
+          <span class="user-avatar-dot"></span>
+          <span class="nav-user-name">Admin User</span>
+        </div>
+        <a href="#" class="nav-btn-logout logout-trigger">Logout</a>
+      </div>
+
+      <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=80');">
+    <div class="page-hero-content">
+      <span class="section-tag" style="color: var(--color-gold-light);">Uncompromising Hospitality</span>
+      <h1 class="section-title light">World-Class Services & Amenities</h1>
+      <p class="section-desc light" style="margin-bottom: 0;">
+        From holistic rejuvenation and fine culinary artistry to seamless private transit, every moment is crafted to perfection.
+      </p>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> &bull; <span>Services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid Section -->
+  <section class="section-padding bg-sand">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 50px;">
+        <span class="section-tag">Signature Offerings</span>
+        <h2 class="section-title">Indulge in Pure Privilege</h2>
+        <p class="section-desc">
+          Every amenity at Travelia Resorts is tailored to provide supreme comfort, wellness, and effortless leisure throughout your vacation.
+        </p>
+      </div>
+
+      <!-- Grid of 8 Required Services -->
+      <div class="grid-4" style="gap: 30px;">
+        
+        <!-- 1. Swimming Pool -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <img src="assets/icons/pool.svg" alt="Swimming Pool Icon" width="34" height="34" style="filter: invert(65%) sepia(50%) saturate(600%) hue-rotate(5deg);">
+          </div>
+          <h3 class="service-title">Swimming Pool</h3>
+          <p class="service-desc">
+            Architecturally stunned infinity pools blending seamlessly into natural sea horizons, accompanied by private submerged sunbeds, heated whirlpools, and swim-up cocktail lounges.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.8rem; color: var(--color-gold-dark); font-weight: 600;">
+            ✦ Temperature Controlled &bull; Daybed Cabanas
+          </div>
+        </div>
+
+        <!-- 2. Luxury Restaurant -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <img src="assets/icons/restaurant.svg" alt="Restaurant Icon" width="34" height="34" style="filter: invert(65%) sepia(50%) saturate(600%) hue-rotate(5deg);">
+          </div>
+          <h3 class="service-title">Luxury Restaurant</h3>
+          <p class="service-desc">
+            Gastronomic culinary journeys led by Michelin-decorated master chefs. Indulge in artisanal organic creations, intimate oceanfront candlelit dinners, and sommelier-curated grand cru vintages.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.8rem; color: var(--color-gold-dark); font-weight: 600;">
+            ✦ Farm-to-Table &bull; Private Wine Cellar
+          </div>
+        </div>
+
+        <!-- 3. Spa & Wellness -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <img src="assets/icons/spa.svg" alt="Spa Icon" width="34" height="34" style="filter: invert(65%) sepia(50%) saturate(600%) hue-rotate(5deg);">
+          </div>
+          <h3 class="service-title">Spa & Wellness</h3>
+          <p class="service-desc">
+            Holistic rejuvenation rooted in ancient Ayurvedic practices, soothing hydrotherapy circuits, mineral herbal baths, aromatherapy massages, and guided sunset meditation pavilions.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.8rem; color: var(--color-gold-dark); font-weight: 600;">
+            ✦ Ayurvedic Specialists &bull; Steam & Sauna
+          </div>
+        </div>
+
+        <!-- 4. Airport Pickup -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <img src="assets/icons/airport.svg" alt="Airport Pickup Icon" width="34" height="34" style="filter: invert(65%) sepia(50%) saturate(600%) hue-rotate(5deg);">
+          </div>
+          <h3 class="service-title">Airport Pickup</h3>
+          <p class="service-desc">
+            Effortless VIP arrivals with chauffeured luxury fleets (Mercedes-Maybach & Range Rover), private speedboat transfers in coastal retreats, and direct seaplane docking at tropical atolls.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.8rem; color: var(--color-gold-dark); font-weight: 600;">
+            ✦ VIP Terminal Meet &bull; Luggage Handling
+          </div>
+        </div>
+
+        <!-- 5. Adventure Activities -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <img src="assets/icons/adventure.svg" alt="Adventure Activities Icon" width="34" height="34" style="filter: invert(65%) sepia(50%) saturate(600%) hue-rotate(5deg);">
+          </div>
+          <h3 class="service-title">Adventure Activities</h3>
+          <p class="service-desc">
+            Curated outdoor excursions including guided coral reef scuba diving, deep-sea fishing expeditions, alpine ski tours, tropical jungle canyoning, and sunset catamaran regattas.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.8rem; color: var(--color-gold-dark); font-weight: 600;">
+            ✦ Certified Instructors &bull; Gear Included
+          </div>
+        </div>
+
+        <!-- 6. Free Wi-Fi -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <img src="assets/icons/wifi.svg" alt="Free Wi-Fi Icon" width="34" height="34" style="filter: invert(65%) sepia(50%) saturate(600%) hue-rotate(5deg);">
+          </div>
+          <h3 class="service-title">Free Wi-Fi</h3>
+          <p class="service-desc">
+            Ultra-fast enterprise-grade fiber optic and low-latency satellite Wi-Fi accessible seamlessly across every villa, private beach cabana, infinity pool lounge, and dining pavilion.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.8rem; color: var(--color-gold-dark); font-weight: 600;">
+            ✦ Gigabit Speeds &bull; 100% Resort Coverage
+          </div>
+        </div>
+
+        <!-- 7. Gym & Fitness -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <img src="assets/icons/gym.svg" alt="Gym Icon" width="34" height="34" style="filter: invert(65%) sepia(50%) saturate(600%) hue-rotate(5deg);">
+          </div>
+          <h3 class="service-title">Gym & Fitness</h3>
+          <p class="service-desc">
+            State-of-the-art Technogym cardio and strength systems facing panoramic ocean glass walls. Includes elite personal trainers, Pilates reformer studios, and sunrise yoga classes.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.8rem; color: var(--color-gold-dark); font-weight: 600;">
+            ✦ Open 24 Hours &bull; Personal Trainers
+          </div>
+        </div>
+
+        <!-- 8. Room Service -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <img src="assets/icons/room-service.svg" alt="Room Service Icon" width="34" height="34" style="filter: invert(65%) sepia(50%) saturate(600%) hue-rotate(5deg);">
+          </div>
+          <h3 class="service-title">Room Service</h3>
+          <p class="service-desc">
+            24/7 gourmet in-room dining prepared with white-glove finesse. Enjoy floating breakfasts in your private plunge pool, midnight artisan suppers, and customized nutritional dietary menus.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.8rem; color: var(--color-gold-dark); font-weight: 600;">
+            ✦ 24/7 Availability &bull; Floating Pool Trays
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Experience Highlight Banner -->
+      <div style="margin-top: 60px; background: var(--color-white); border-radius: var(--radius-lg); padding: 40px; border: 1px solid var(--color-border-gold); box-shadow: var(--shadow-sm);" class="reveal">
+        <div class="grid-2" style="align-items: center; gap: 40px;">
+          <div>
+            <span class="section-tag">Bespoke Concierge</span>
+            <h3 style="font-size: 1.8rem; margin-bottom: 14px;">Special Request or Custom Itinerary?</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.7;">
+              Whether planning an intimate proposal on a deserted sandbank, chartering a private helicopter, or booking a private nutritionist, our Guest Experience team caters to your every desire.
+            </p>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="contact.html" class="btn btn-primary">Connect with Concierge</a>
+              <a href="booking.html" class="btn btn-dark">Reserve Your Stay</a>
+            </div>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=80" alt="Resort Butler Service" style="border-radius: var(--radius-md); width: 100%; height: 280px; object-fit: cover; box-shadow: var(--shadow-md);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-crest">T</div>
+            <div class="logo-text">
+              <span class="logo-title">TRAVELIA</span>
+              <span class="logo-subtitle">RESORTS</span>
+            </div>
+          </a>
+          <p class="footer-tagline">“Escape. Relax. Experience.”</p>
+          <p class="footer-desc">
+            A bespoke collection of international luxury sanctuaries, offering timeless architecture, restorative wellness, and authentic hospitality across the globe.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+            <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+            <a href="#" class="social-icon" aria-label="Twitter">X</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms & Suites</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Services & Facilities</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Accommodations</h4>
+          <ul class="footer-links">
+            <li><a href="rooms.html">Deluxe Room</a></li>
+            <li><a href="rooms.html">Ocean View Suite</a></li>
+            <li><a href="rooms.html">Private Villa</a></li>
+            <li><a href="rooms.html">Family Suite</a></li>
+            <li><a href="booking.html">Direct Reservations</a></li>
+            <li><a href="#" class="logout-trigger">Member Logout</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="footer-contact-icon">📍</span>
+              <span>Travelia Bay Boulevard, Seaside Promenade, Goa & Worldwide</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">📞</span>
+              <span>+91 98765 43210 / 1800 233 4567</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">✉️</span>
+              <span>reservations@traveliaresorts.com</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">⏰</span>
+              <span>24/7 Front Desk & Concierge Service</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> Travelia Resorts. All Rights Reserved.</div>
+        <div>
+          <span>Privacy Policy</span> &bull; 
+          <span>Terms & Conditions</span> &bull; 
+          <span>Luxury Hospitality Standards</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>

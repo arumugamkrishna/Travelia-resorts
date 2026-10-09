@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations | TRAVELIA RESORTS</title>
+  <meta name="description" content="Discover the world's most sought-after vacation destinations with Travelia Resorts: Maldives, Bali, Switzerland, Goa, Dubai, and Paris.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-crest.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Travelia Resorts Home">
+        <div class="logo-crest">T</div>
+        <div class="logo-text">
+          <span class="logo-title">TRAVELIA</span>
+          <span class="logo-subtitle">RESORTS</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="rooms.html" class="nav-link">Rooms</a>
+        <a href="destinations.html" class="nav-link active">Destinations</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="booking.html" class="nav-link">Booking</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#" class="nav-link logout-trigger" style="color: #ff9e9e;">Logout</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-user-badge">
+          <span class="user-avatar-dot"></span>
+          <span class="nav-user-name">Admin User</span>
+        </div>
+        <a href="#" class="nav-btn-logout logout-trigger">Logout</a>
+      </div>
+
+      <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1920&q=80');">
+    <div class="page-hero-content">
+      <span class="section-tag" style="color: var(--color-gold-light);">Global Sanctuaries</span>
+      <h1 class="section-title light">Our Exotic Destinations</h1>
+      <p class="section-desc light" style="margin-bottom: 0;">
+        From secluded Indian Ocean coral atolls to snow-kissed Swiss Alps and romantic Parisian terraces, escape to unforgettable worlds.
+      </p>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> &bull; <span>Destinations</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations Section -->
+  <section class="section-padding bg-sand">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 50px;">
+        <span class="section-tag">Iconic Escapes</span>
+        <h2 class="section-title">Handpicked Global Havens</h2>
+        <p class="section-desc">
+          Each Travelia resort destination is meticulously chosen for its pristine natural beauty, rich culture, and effortless relaxation.
+        </p>
+      </div>
+
+      <!-- Destination Cards Grid (All 6 Required Destinations) -->
+      <div class="grid-3" style="gap: 36px;">
+        
+        <!-- 1. Maldives -->
+        <div class="destination-card reveal" style="height: 440px;" onclick="openDestDetail('Maldives')">
+          <img src="assets/images/maldives.jpg" onerror="this.src='https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=80'" alt="Travelia Maldives Resort" class="destination-card-bg">
+          <div class="destination-overlay">
+            <span class="destination-location-tag">Indian Ocean &bull; Tropical Paradise</span>
+            <h3 class="destination-title">Maldives</h3>
+            <p class="destination-desc">
+              Floating stilt villas perched over luminescent coral lagoons, private catamaran sailing, and romantic sandbank dinners under the stars.
+            </p>
+            <div class="destination-btn-wrap">
+              <span class="btn btn-outline-light btn-sm">Explore Destination</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Bali -->
+        <div class="destination-card reveal" style="height: 440px;" onclick="openDestDetail('Bali')">
+          <img src="assets/images/bali.jpg" onerror="this.src='https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80'" alt="Travelia Bali Retreat" class="destination-card-bg">
+          <div class="destination-overlay">
+            <span class="destination-location-tag">Indonesia &bull; Spiritual Serenity</span>
+            <h3 class="destination-title">Bali</h3>
+            <p class="destination-desc">
+              Immerse yourself in lush rainforest ravines of Ubud, cascading infinity pools, ancient Hindu temple blessings, and soul-healing spa rituals.
+            </p>
+            <div class="destination-btn-wrap">
+              <span class="btn btn-outline-light btn-sm">Explore Destination</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Switzerland -->
+        <div class="destination-card reveal" style="height: 440px;" onclick="openDestDetail('Switzerland')">
+          <img src="assets/images/switzerland.jpg" onerror="this.src='https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=900&q=80'" alt="Travelia Swiss Chalet" class="destination-card-bg">
+          <div class="destination-overlay">
+            <span class="destination-location-tag">Europe &bull; Alpine Grandeur</span>
+            <h3 class="destination-title">Switzerland</h3>
+            <p class="destination-desc">
+              Breathtaking panoramic Matterhorn views, ski-in chalets with crackling cedar fireplaces, fondue gastronomy, and heated alpine hydrotherapy baths.
+            </p>
+            <div class="destination-btn-wrap">
+              <span class="btn btn-outline-light btn-sm">Explore Destination</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Goa -->
+        <div class="destination-card reveal" style="height: 440px;" onclick="openDestDetail('Goa')">
+          <img src="assets/images/goa.jpg" onerror="this.src='https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80'" alt="Travelia Goa Beach Resort" class="destination-card-bg">
+          <div class="destination-overlay">
+            <span class="destination-location-tag">India &bull; Coastal Heritage</span>
+            <h3 class="destination-title">Goa</h3>
+            <p class="destination-desc">
+              Private golden shores, Portuguese heritage villas, refreshing palm canopies, coastal seafood feasts, and vibrant tropical sunset sundecks.
+            </p>
+            <div class="destination-btn-wrap">
+              <span class="btn btn-outline-light btn-sm">Explore Destination</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Dubai -->
+        <div class="destination-card reveal" style="height: 440px;" onclick="openDestDetail('Dubai')">
+          <img src="assets/images/dubai.jpg" onerror="this.src='https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80'" alt="Travelia Dubai Luxury Oasis" class="destination-card-bg">
+          <div class="destination-overlay">
+            <span class="destination-location-tag">UAE &bull; Modern Royalty</span>
+            <h3 class="destination-title">Dubai</h3>
+            <p class="destination-desc">
+              Opulent beachfront suites along Palm Jumeirah, private desert safari glamping, skyline infinity pools, and world-class luxury shopping concierges.
+            </p>
+            <div class="destination-btn-wrap">
+              <span class="btn btn-outline-light btn-sm">Explore Destination</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Paris -->
+        <div class="destination-card reveal" style="height: 440px;" onclick="openDestDetail('Paris')">
+          <img src="assets/images/paris.jpg" onerror="this.src='https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80'" alt="Travelia Paris Grand Palace" class="destination-card-bg">
+          <div class="destination-overlay">
+            <span class="destination-location-tag">France &bull; City of Lights</span>
+            <h3 class="destination-title">Paris</h3>
+            <p class="destination-desc">
+              Haussmann-style rooftop suites facing the Eiffel Tower, private art museum viewings, classical French patisseries, and romantic Seine river cruises.
+            </p>
+            <div class="destination-btn-wrap">
+              <span class="btn btn-outline-light btn-sm">Explore Destination</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Custom Destination Experience Strip -->
+      <div style="margin-top: 70px; background: var(--color-primary-dark); color: var(--color-white); border-radius: var(--radius-lg); padding: 48px; border: 1px solid var(--color-border-gold);" class="reveal">
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <span class="section-tag" style="color: var(--color-gold-light);">Tailored Vacations</span>
+            <h3 style="font-size: 2rem; color: var(--color-white); margin-bottom: 14px;">Looking for Multi-Destination Travel?</h3>
+            <p style="color: rgba(255, 255, 255, 0.82); font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px;">
+              Our bespoke travel specialists curate cross-continental journeys between our resorts with private jet transfers, VIP airport lounges, and seamless luggage forwarding.
+            </p>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="booking.html" class="btn btn-primary">Book Vacation Package</a>
+              <a href="contact.html" class="btn btn-outline-light">Consult Travel Concierge</a>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=700&q=80" alt="Luxury Travel Jet" style="border-radius: var(--radius-md); box-shadow: var(--shadow-gold); max-height: 280px; width: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Destination Modal for Details -->
+  <div id="destModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 600px; text-align: left; padding: 0; overflow: hidden;">
+      <button class="modal-close-btn" style="z-index: 10; top: 14px; right: 14px;" onclick="closeDestModal()">&times;</button>
+      <div id="destModalImgWrap" style="height: 260px; overflow: hidden;">
+        <img id="destModalImg" src="" alt="Destination" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div style="padding: 28px;">
+        <span id="destModalRegion" style="font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--color-gold-dark); font-weight: 700;"></span>
+        <h3 id="destModalTitle" style="font-size: 1.8rem; margin: 4px 0 12px 0;"></h3>
+        <p id="destModalDesc" style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6;"></p>
+        
+        <div style="background: var(--color-sand); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 24px;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 8px; color: var(--color-primary-dark);">Resort Highlights:</h4>
+          <ul id="destModalHighlights" style="font-size: 0.88rem; color: var(--color-text-body); list-style: disc; padding-left: 20px; line-height: 1.7;">
+          </ul>
+        </div>
+
+        <div style="display: flex; gap: 12px; justify-content: flex-end;">
+          <button class="btn btn-outline-gold" onclick="closeDestModal()">Close</button>
+          <a href="booking.html" class="btn btn-primary">Book This Resort</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-crest">T</div>
+            <div class="logo-text">
+              <span class="logo-title">TRAVELIA</span>
+              <span class="logo-subtitle">RESORTS</span>
+            </div>
+          </a>
+          <p class="footer-tagline">“Escape. Relax. Experience.”</p>
+          <p class="footer-desc">
+            A bespoke collection of international luxury sanctuaries, offering timeless architecture, restorative wellness, and authentic hospitality across the globe.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+            <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+            <a href="#" class="social-icon" aria-label="Twitter">X</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms & Suites</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Services & Facilities</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Accommodations</h4>
+          <ul class="footer-links">
+            <li><a href="rooms.html">Deluxe Room</a></li>
+            <li><a href="rooms.html">Ocean View Suite</a></li>
+            <li><a href="rooms.html">Private Villa</a></li>
+            <li><a href="rooms.html">Family Suite</a></li>
+            <li><a href="booking.html">Direct Reservations</a></li>
+            <li><a href="#" class="logout-trigger">Member Logout</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="footer-contact-icon">📍</span>
+              <span>Travelia Bay Boulevard, Seaside Promenade, Goa & Worldwide</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">📞</span>
+              <span>+91 98765 43210 / 1800 233 4567</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">✉️</span>
+              <span>reservations@traveliaresorts.com</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">⏰</span>
+              <span>24/7 Front Desk & Concierge Service</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> Travelia Resorts. All Rights Reserved.</div>
+        <div>
+          <span>Privacy Policy</span> &bull; 
+          <span>Terms & Conditions</span> &bull; 
+          <span>Luxury Hospitality Standards</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">↑</button>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Destination Interactive Explorer
+    const DEST_DATA = {
+      'Maldives': {
+        title: 'Travelia Atoll & Villas, Maldives',
+        region: 'Indian Ocean',
+        img: 'assets/images/maldives.jpg',
+        desc: 'Suspended above turquoise lagoons, our Maldives sanctuary offers unmatched serenity with private glass-bottom overwater villas, underwater coral dining, and private marine biologist snorkel tours.',
+        highlights: ['Private seaplane transfers directly to dock', 'House reef snorkeling with manta rays and sea turtles', 'Submerged wine cellar featuring over 800 vintages', 'Personal stargazing deck with astronomical telescope']
+      },
+      'Bali': {
+        title: 'Travelia Rainforest Sanctuary, Bali',
+        region: 'Ubud, Indonesia',
+        img: 'assets/images/bali.jpg',
+        desc: 'Tucked within the mystical river valley of Ubud, indulge in infinity pools hanging over the jungle canopy, traditional Melukat water purification ceremonies, and organic farm-to-table dining.',
+        highlights: ['Tiered infinity pool overlooking sacred valleys', 'Holistic Balinese healing pavilion & daily morning yoga', 'Private rice terrace walking trails with local guides', 'Open-air botanical pavilion dining']
+      },
+      'Switzerland': {
+        title: 'Travelia Alpine Grand Chalet, Switzerland',
+        region: 'Zermatt, Swiss Alps',
+        img: 'assets/images/switzerland.jpg',
+        desc: 'Commanding breathtaking views of the iconic Matterhorn, our Swiss retreat blends classical Alpine architecture with state-of-the-art ski-in / ski-out luxury, thermal outdoor jacuzzis, and fondue lounges.',
+        highlights: ['Direct ski-in / ski-out access to international pistes', 'Outdoor heated thermal jacuzzi facing snowy peaks', 'Private fireside cigar and vintage cognac lounge', 'Complimentary electric luxury shuttle within Zermatt']
+      },
+      'Goa': {
+        title: 'Travelia Seaside Estate, Goa',
+        region: 'South Goa, India',
+        img: 'assets/images/goa.jpg',
+        desc: 'Nestled on an exclusive private white-sand beach, our Goan estate blends 17th-century Portuguese colonial elegance with tranquil palm groves, fresh seafood grills, and soothing Arabian Sea waves.',
+        highlights: ['Exclusive private beach section with butler-serviced cabanas', 'Authentic Indo-Portuguese architecture and heritage courtyards', 'Ayurvedic seaside treatment gazebos', 'Sunset catamaran yacht cruises along the coastline']
+      },
+      'Dubai': {
+        title: 'Travelia Palm Mirage, Dubai',
+        region: 'Palm Jumeirah, UAE',
+        img: 'assets/images/dubai.jpg',
+        desc: 'Rising gracefully along the crescent of Palm Jumeirah, experience ultra-modern palatial living, private helicopter pad, gold-leaf spa treatments, and private yachts anchored at your disposal.',
+        highlights: ['Panoramic rooftop infinity pool with skyline backdrop', 'Michelin-starred Mediterranean seafood by guest celebrity chefs', 'Private luxury yacht charters from resort marina', 'VIP shopping concierge and chauffeur service']
+      },
+      'Paris': {
+        title: 'Travelia Grand Palais, Paris',
+        region: '8th Arrondissement, France',
+        img: 'assets/images/paris.jpg',
+        desc: 'A meticulously restored 19th-century hôtel particulier overlooking the Seine, providing private Eiffel Tower view suites, curated Louvre private visits, and haute cuisine breakfast terraces.',
+        highlights: ['Unrivaled private balcony views of the Eiffel Tower', 'Private sommelier wine cellar and caviar salon', 'Exclusive after-hours private art gallery admissions', 'Bespoke perfume creation workshop with master perfumers']
+      }
+    };
+
+    function openDestDetail(name) {
+      const data = DEST_DATA[name];
+      if (!data) return;
+
+      document.getElementById('destModalImg').src = data.img;
+      document.getElementById('destModalTitle').textContent = data.title;
+      document.getElementById('destModalRegion').textContent = data.region;
+      document.getElementById('destModalDesc').textContent = data.desc;
+
+      const hlList = document.getElementById('destModalHighlights');
+      hlList.innerHTML = '';
+      data.highlights.forEach(hl => {
+        const li = document.createElement('li');
+        li.textContent = hl;
+        hlList.appendChild(li);
+      });
+
+      document.getElementById('destModal').classList.add('active');
+    }
+
+    function closeDestModal() {
+      document.getElementById('destModal').classList.remove('active');
+    }
+  </script>
+</body>
+</html>

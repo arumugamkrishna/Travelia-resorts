@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | TRAVELIA RESORTS</title>
+  <meta name="description" content="Sign in to your Travelia Resorts membership portal. Access your reservations, bespoke concierge services, and exclusive privileges.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-crest.svg">
+  <style>
+    /* Full-screen luxury background & glassmorphism for Login page */
+    body.auth-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(
+          rgba(10, 37, 29, 0.72),
+          rgba(10, 37, 29, 0.88)
+        ),
+        url('assets/images/hero.jpg') center/cover no-repeat fixed,
+        url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat fixed;
+      color: var(--color-white);
+    }
+
+    .auth-nav-simple {
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .auth-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+
+    .auth-glass-card {
+      width: 100%;
+      max-width: 480px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-radius: var(--radius-lg);
+      padding: 46px 40px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+      border: 1px solid var(--color-border-gold);
+      color: var(--color-text-dark);
+      animation: fadeInUp 0.8s ease both;
+    }
+
+    .auth-footer-simple {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.65);
+    }
+  </style>
+</head>
+<body class="auth-page">
+
+  <!-- Minimal Brand Header for Login -->
+  <header class="auth-nav-simple">
+    <a href="login.html" class="brand-logo" aria-label="Travelia Resorts">
+      <div class="logo-crest">T</div>
+      <div class="logo-text">
+        <span class="logo-title">TRAVELIA</span>
+        <span class="logo-subtitle">RESORTS</span>
+      </div>
+    </a>
+    <div style="font-size: 0.85rem; color: var(--color-gold-light); font-style: italic; font-family: var(--font-serif);">
+      “Escape. Relax. Experience.”
+    </div>
+  </header>
+
+  <!-- Centered Login Card -->
+  <main class="auth-container">
+    <div class="auth-glass-card">
+      
+      <!-- Brand Crest & Heading -->
+      <div class="auth-header">
+        <div class="logo-crest" style="margin: 0 auto 16px auto; width: 54px; height: 54px; font-size: 1.6rem;">T</div>
+        <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2.5px; color: var(--color-gold-dark); font-weight: 700; margin-bottom: 4px;">
+          TRAVELIA RESORTS
+        </div>
+        <h1 style="font-size: 2rem; margin-bottom: 6px; color: var(--color-primary-dark);" id="authFormTitle">
+          Welcome Back
+        </h1>
+        <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+          Sign in to access your luxury vacation portal
+        </p>
+      </div>
+
+      <!-- Demo Credentials Callout -->
+      <div class="demo-credentials-box">
+        <div><strong>Demo Login Credentials:</strong></div>
+        <div style="margin-top: 4px;">
+          Email: <code>admin@travelia.com</code> &bull; Password: <code>12345</code>
+        </div>
+        <button type="button" id="quickDemoFill" class="demo-autofill-btn">
+          Click here to auto-fill demo credentials
+        </button>
+      </div>
+
+      <!-- Mode Switcher Tabs -->
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab-btn active" id="tabLogin">Login</button>
+        <button type="button" class="auth-tab-btn" id="tabRegister">Create Account</button>
+      </div>
+
+      <!-- Success Notification Box (Visible upon successful login) -->
+      <div id="loginSuccessBanner" style="display: none; background: rgba(27, 122, 78, 0.12); border: 1.5px solid var(--color-success); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 22px; text-align: center; color: var(--color-success); font-weight: 700; font-size: 0.95rem;">
+        ✓ Login successful! Welcome to Travelia Resorts.
+      </div>
+
+      <!-- Authentication Form -->
+      <form id="loginForm" novalidate>
+        
+        <!-- Registration-Only Name Field (Toggled on Create Account) -->
+        <div id="registerExtraFields" style="display: none;">
+          <div class="form-group">
+            <label class="form-label" for="regName">Full Legal Name</label>
+            <input type="text" id="regName" class="form-control" placeholder="Lady Eleanor Vance">
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email Address *</label>
+          <input type="email" id="loginEmail" class="form-control" placeholder="admin@travelia.com" required autocomplete="email">
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password *</label>
+          <input type="password" id="loginPassword" class="form-control" placeholder="••••••••" required autocomplete="current-password">
+        </div>
+
+        <!-- Remember Me & Forgot Password -->
+        <div class="auth-links">
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; cursor: pointer; color: var(--color-text-body);">
+            <input type="checkbox" checked style="accent-color: var(--color-gold);"> Remember me
+          </label>
+          <a href="#" id="forgotPasswordBtn" class="auth-link">Forgot Password?</a>
+        </div>
+
+        <!-- Action Button -->
+        <div style="margin-top: 24px;">
+          <button type="submit" id="authSubmitBtn" class="btn btn-primary btn-full" style="padding: 15px; font-size: 1.05rem;">
+            Login
+          </button>
+        </div>
+
+        <!-- Notice -->
+        <div style="margin-top: 24px; text-align: center; font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6;">
+          🔒 Secure 256-Bit SSL Encrypted Portal &bull; Travelia Resorts Concierge
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="auth-footer-simple">
+    &copy; <span class="current-year">2026</span> Travelia Resorts. All Rights Reserved. &bull; <em>“Escape. Relax. Experience.”</em>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

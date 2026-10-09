@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooms & Suites | TRAVELIA RESORTS</title>
+  <meta name="description" content="Explore luxury rooms, ocean suites, and private villas at Travelia Resorts. Handcrafted comfort, premium amenities, and stunning views.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-crest.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Travelia Resorts Home">
+        <div class="logo-crest">T</div>
+        <div class="logo-text">
+          <span class="logo-title">TRAVELIA</span>
+          <span class="logo-subtitle">RESORTS</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="rooms.html" class="nav-link active">Rooms</a>
+        <a href="destinations.html" class="nav-link">Destinations</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="booking.html" class="nav-link">Booking</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#" class="nav-link logout-trigger" style="color: #ff9e9e;">Logout</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-user-badge">
+          <span class="user-avatar-dot"></span>
+          <span class="nav-user-name">Admin User</span>
+        </div>
+        <a href="#" class="nav-btn-logout logout-trigger">Logout</a>
+      </div>
+
+      <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1920&q=80');">
+    <div class="page-hero-content">
+      <span class="section-tag" style="color: var(--color-gold-light);">Refined Living Spaces</span>
+      <h1 class="section-title light">Rooms & Luxury Suites</h1>
+      <p class="section-desc light" style="margin-bottom: 0;">
+        Experience peerless architecture, bespoke Italian marble, plush feather beds, and private terraces opening to nature.
+      </p>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> &bull; <span>Rooms & Suites</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Room Listings Section -->
+  <section class="section-padding bg-sand">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 50px;">
+        <span class="section-tag">Accommodations</span>
+        <h2 class="section-title">Select Your Personal Haven</h2>
+        <p class="section-desc">
+          All rooms include complimentary high-speed Wi-Fi, daily artisanal breakfast buffet, access to infinity pools, and 24-hour concierge assistance.
+        </p>
+      </div>
+
+      <!-- Main Room Grid -->
+      <div class="grid-2" style="gap: 40px;">
+        
+        <!-- Room 1: Deluxe Room -->
+        <div class="room-card reveal" style="border-radius: var(--radius-lg);">
+          <div class="room-image-wrap" style="height: 340px;">
+            <img src="assets/images/deluxe-room.jpg" onerror="this.src='https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1000&q=80'" alt="Deluxe Room at Travelia Resorts">
+            <span class="room-badge">Garden & Mountain</span>
+            <div class="room-price-tag">₹5,999 <span>/night</span></div>
+          </div>
+          <div class="room-card-body" style="padding: 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+              <h3 class="room-card-title" style="font-size: 1.6rem; margin-bottom: 0;">Deluxe Room</h3>
+              <span style="color: var(--color-gold); font-size: 0.9rem;">★★★★★</span>
+            </div>
+            <p class="room-card-desc">
+              Immerse yourself in understated sophistication. Featuring hand-carved teak wood furnishings, a serene private terrace overlooking lush botanical gardens, and an Italian marble bathroom with rainfall shower.
+            </p>
+            
+            <div class="room-specs">
+              <div class="spec-item"><span class="spec-icon">👥</span> <strong>Capacity:</strong> Up to 2 Guests</div>
+              <div class="spec-item"><span class="spec-icon">📐</span> <strong>Size:</strong> 450 sq.ft (42 m²)</div>
+              <div class="spec-item"><span class="spec-icon">🛏️</span> <strong>Bed:</strong> King Size Bed</div>
+            </div>
+
+            <div style="margin-bottom: 14px; font-weight: 600; font-size: 0.88rem; color: var(--color-primary-dark);">Included Facilities:</div>
+            <div class="room-facilities">
+              <span class="facility-pill">☕ Espresso Machine</span>
+              <span class="facility-pill">📶 High-Speed Wi-Fi</span>
+              <span class="facility-pill">🌿 Botanical Balcony</span>
+              <span class="facility-pill">🚿 Rainfall Shower</span>
+              <span class="facility-pill">🥐 Breakfast Included</span>
+              <span class="facility-pill">📺 55" OLED TV</span>
+            </div>
+
+            <div class="room-card-actions" style="margin-top: 15px; gap: 16px;">
+              <button class="btn btn-outline-gold" onclick="viewRoomDetails('Deluxe Room')">View Details</button>
+              <button class="btn btn-primary book-room-btn" data-room="Deluxe Room" onclick="bookThisRoom('Deluxe Room')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 2: Ocean View Suite -->
+        <div class="room-card reveal" style="border-radius: var(--radius-lg);">
+          <div class="room-image-wrap" style="height: 340px;">
+            <img src="assets/images/ocean-suite.jpg" onerror="this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'" alt="Ocean View Suite at Travelia Resorts">
+            <span class="room-badge">Oceanfront</span>
+            <div class="room-price-tag">₹9,999 <span>/night</span></div>
+          </div>
+          <div class="room-card-body" style="padding: 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+              <h3 class="room-card-title" style="font-size: 1.6rem; margin-bottom: 0;">Ocean View Suite</h3>
+              <span style="color: var(--color-gold); font-size: 0.9rem;">★★★★★</span>
+            </div>
+            <p class="room-card-desc">
+              Wake up to sweeping 180-degree panoramas of endless blue waters. Unwind on your teak daybed, soak in the standalone deep-immersion bathtub facing the ocean, and enjoy dedicated concierge service.
+            </p>
+            
+            <div class="room-specs">
+              <div class="spec-item"><span class="spec-icon">👥</span> <strong>Capacity:</strong> 2 - 3 Guests</div>
+              <div class="spec-item"><span class="spec-icon">📐</span> <strong>Size:</strong> 720 sq.ft (67 m²)</div>
+              <div class="spec-item"><span class="spec-icon">🛏️</span> <strong>Bed:</strong> California King</div>
+            </div>
+
+            <div style="margin-bottom: 14px; font-weight: 600; font-size: 0.88rem; color: var(--color-primary-dark);">Included Facilities:</div>
+            <div class="room-facilities">
+              <span class="facility-pill">🌊 Wraparound Ocean Balcony</span>
+              <span class="facility-pill">🛁 Deep Soaking Tub</span>
+              <span class="facility-pill">🍾 Welcome Champagne</span>
+              <span class="facility-pill">🛎️ Butler Service</span>
+              <span class="facility-pill">📶 High-Speed Wi-Fi</span>
+              <span class="facility-pill">🥐 Gourmet Breakfast</span>
+            </div>
+
+            <div class="room-card-actions" style="margin-top: 15px; gap: 16px;">
+              <button class="btn btn-outline-gold" onclick="viewRoomDetails('Ocean View Suite')">View Details</button>
+              <button class="btn btn-primary book-room-btn" data-room="Ocean View Suite" onclick="bookThisRoom('Ocean View Suite')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 3: Private Villa -->
+        <div class="room-card reveal" style="border-radius: var(--radius-lg);">
+          <div class="room-image-wrap" style="height: 340px;">
+            <img src="assets/images/private-villa.jpg" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'" alt="Private Villa at Travelia Resorts">
+            <span class="room-badge">Signature Luxury</span>
+            <div class="room-price-tag">₹14,999 <span>/night</span></div>
+          </div>
+          <div class="room-card-body" style="padding: 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+              <h3 class="room-card-title" style="font-size: 1.6rem; margin-bottom: 0;">Private Villa</h3>
+              <span style="color: var(--color-gold); font-size: 0.9rem;">★★★★★</span>
+            </div>
+            <p class="room-card-desc">
+              The crown jewel of Travelia. A secluded two-story villa surrounded by tropical foliage, featuring your own private heated infinity plunge pool, open-air sun deck, outdoor rain shower, and personal chef availability.
+            </p>
+            
+            <div class="room-specs">
+              <div class="spec-item"><span class="spec-icon">👥</span> <strong>Capacity:</strong> Up to 4 Guests</div>
+              <div class="spec-item"><span class="spec-icon">📐</span> <strong>Size:</strong> 1,350 sq.ft (125 m²)</div>
+              <div class="spec-item"><span class="spec-icon">🛏️</span> <strong>Bed:</strong> 2 Master King Suites</div>
+            </div>
+
+            <div style="margin-bottom: 14px; font-weight: 600; font-size: 0.88rem; color: var(--color-primary-dark);">Included Facilities:</div>
+            <div class="room-facilities">
+              <span class="facility-pill">🏊 Private Plunge Pool</span>
+              <span class="facility-pill">🏖️ Direct Beach Gate</span>
+              <span class="facility-pill">👨‍🍳 Dedicated Private Chef</span>
+              <span class="facility-pill">🍸 Fully Stocked Wet Bar</span>
+              <span class="facility-pill">🚗 Free Airport Transfer</span>
+              <span class="facility-pill">💆 In-Villa Spa Service</span>
+            </div>
+
+            <div class="room-card-actions" style="margin-top: 15px; gap: 16px;">
+              <button class="btn btn-outline-gold" onclick="viewRoomDetails('Private Villa')">View Details</button>
+              <button class="btn btn-primary book-room-btn" data-room="Private Villa" onclick="bookThisRoom('Private Villa')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 4: Family Suite -->
+        <div class="room-card reveal" style="border-radius: var(--radius-lg);">
+          <div class="room-image-wrap" style="height: 340px;">
+            <img src="assets/images/family-suite.jpg" onerror="this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80'" alt="Family Suite at Travelia Resorts">
+            <span class="room-badge">Family Friendly</span>
+            <div class="room-price-tag">₹11,999 <span>/night</span></div>
+          </div>
+          <div class="room-card-body" style="padding: 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+              <h3 class="room-card-title" style="font-size: 1.6rem; margin-bottom: 0;">Family Suite</h3>
+              <span style="color: var(--color-gold); font-size: 0.9rem;">★★★★★</span>
+            </div>
+            <p class="room-card-desc">
+              Tailored for effortless multi-generational luxury. Includes two interconnected master bedrooms, an expansive living salon, interactive media station, child safety provisions, and picturesque lagoon vistas.
+            </p>
+            
+            <div class="room-specs">
+              <div class="spec-item"><span class="spec-icon">👥</span> <strong>Capacity:</strong> 4 - 6 Guests</div>
+              <div class="spec-item"><span class="spec-icon">📐</span> <strong>Size:</strong> 950 sq.ft (88 m²)</div>
+              <div class="spec-item"><span class="spec-icon">🛏️</span> <strong>Bed:</strong> 1 King + 2 Twin Beds</div>
+            </div>
+
+            <div style="margin-bottom: 14px; font-weight: 600; font-size: 0.88rem; color: var(--color-primary-dark);">Included Facilities:</div>
+            <div class="room-facilities">
+              <span class="facility-pill">🎮 Kids Entertainment Hub</span>
+              <span class="facility-pill">🛋️ Expansive Living Salon</span>
+              <span class="facility-pill">🚿 Dual En-Suite Baths</span>
+              <span class="facility-pill">🥐 Family Breakfast Buffet</span>
+              <span class="facility-pill">👶 Childcare On-Request</span>
+              <span class="facility-pill">📶 High-Speed Wi-Fi</span>
+            </div>
+
+            <div class="room-card-actions" style="margin-top: 15px; gap: 16px;">
+              <button class="btn btn-outline-gold" onclick="viewRoomDetails('Family Suite')">View Details</button>
+              <button class="btn btn-primary book-room-btn" data-room="Family Suite" onclick="bookThisRoom('Family Suite')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Comparison Callout -->
+      <div style="margin-top: 60px; background: var(--color-white); border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--color-border-gold); text-align: center;" class="reveal">
+        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Need Assistance Choosing the Perfect Room?</h3>
+        <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto 24px auto;">
+          Our vacation concierges are available 24/7 to personalize your room arrangements, floor preferences, and bespoke anniversary setups.
+        </p>
+        <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-dark">Contact Resort Concierge</a>
+          <a href="booking.html" class="btn btn-primary">Proceed to Booking Form</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-crest">T</div>
+            <div class="logo-text">
+              <span class="logo-title">TRAVELIA</span>
+              <span class="logo-subtitle">RESORTS</span>
+            </div>
+          </a>
+          <p class="footer-tagline">“Escape. Relax. Experience.”</p>
+          <p class="footer-desc">
+            A bespoke collection of international luxury sanctuaries, offering timeless architecture, restorative wellness, and authentic hospitality across the globe.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+            <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+            <a href="#" class="social-icon" aria-label="Twitter">X</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms & Suites</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Services & Facilities</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Accommodations</h4>
+          <ul class="footer-links">
+            <li><a href="rooms.html">Deluxe Room</a></li>
+            <li><a href="rooms.html">Ocean View Suite</a></li>
+            <li><a href="rooms.html">Private Villa</a></li>
+            <li><a href="rooms.html">Family Suite</a></li>
+            <li><a href="booking.html">Direct Reservations</a></li>
+            <li><a href="#" class="logout-trigger">Member Logout</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="footer-contact-icon">📍</span>
+              <span>Travelia Bay Boulevard, Seaside Promenade, Goa & Worldwide</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">📞</span>
+              <span>+91 98765 43210 / 1800 233 4567</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">✉️</span>
+              <span>reservations@traveliaresorts.com</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">⏰</span>
+              <span>24/7 Front Desk & Concierge Service</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> Travelia Resorts. All Rights Reserved.</div>
+        <div>
+          <span>Privacy Policy</span> &bull; 
+          <span>Terms & Conditions</span> &bull; 
+          <span>Luxury Hospitality Standards</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>

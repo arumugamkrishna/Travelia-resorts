@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Stay | TRAVELIA RESORTS</title>
+  <meta name="description" content="Reserve your luxury room or private villa directly with Travelia Resorts. Guaranteed best rates, bespoke concierge arrangements, and instant confirmation.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-crest.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Travelia Resorts Home">
+        <div class="logo-crest">T</div>
+        <div class="logo-text">
+          <span class="logo-title">TRAVELIA</span>
+          <span class="logo-subtitle">RESORTS</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="rooms.html" class="nav-link">Rooms</a>
+        <a href="destinations.html" class="nav-link">Destinations</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="booking.html" class="nav-link active">Booking</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#" class="nav-link logout-trigger" style="color: #ff9e9e;">Logout</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-user-badge">
+          <span class="user-avatar-dot"></span>
+          <span class="nav-user-name">Admin User</span>
+        </div>
+        <a href="#" class="nav-btn-logout logout-trigger">Logout</a>
+      </div>
+
+      <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1920&q=80');">
+    <div class="page-hero-content">
+      <span class="section-tag" style="color: var(--color-gold-light);">Direct Reservation Privilege</span>
+      <h1 class="section-title light">Book Your Stay</h1>
+      <p class="section-desc light" style="margin-bottom: 0;">
+        Secure your sanctuary with our best-rate guarantee, complimentary welcome champagne, and personalized concierge planning.
+      </p>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> &bull; <span>Booking</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="section-padding bg-sand">
+    <div class="container">
+      
+      <!-- Pre-selection Notification Banner (hidden unless room selected) -->
+      <div id="roomSelectedBanner" style="display: none; background: rgba(197, 160, 89, 0.15); border: 1px solid var(--color-gold); border-radius: var(--radius-sm); padding: 14px 20px; margin-bottom: 30px; font-size: 0.95rem; color: var(--color-primary-dark);" class="reveal">
+        ✨ <strong>Selected Room:</strong> <span id="selectedRoomDisplay"></span> has been pre-selected for your booking!
+      </div>
+
+      <div class="grid-2" style="grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: flex-start;">
+        
+        <!-- Left: Booking Form Card -->
+        <div class="form-card reveal">
+          <div style="border-bottom: 1px solid var(--color-border); padding-bottom: 20px; margin-bottom: 28px;">
+            <span class="section-tag">Reservation Details</span>
+            <h2 style="font-size: 1.8rem; margin-top: 4px;">Guest & Stay Information</h2>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 6px;">
+              Please complete all mandatory details to initiate your reservation.
+            </p>
+          </div>
+
+          <form id="bookingForm" novalidate>
+            
+            <!-- Full Name -->
+            <div class="form-group">
+              <label class="form-label" for="fullName">Full Name *</label>
+              <input type="text" id="fullName" class="form-control" placeholder="e.g. Alexander Vance" required>
+            </div>
+
+            <!-- Email & Phone Grid -->
+            <div class="grid-2" style="gap: 20px;">
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address *</label>
+                <input type="email" id="email" class="form-control" placeholder="alexander@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number *</label>
+                <input type="tel" id="phone" class="form-control" placeholder="+91 98765 43210" required>
+              </div>
+            </div>
+
+            <!-- Select Room -->
+            <div class="form-group">
+              <label class="form-label" for="roomType">Select Room *</label>
+              <select id="roomType" class="form-control" required>
+                <option value="Deluxe Room">Deluxe Room (₹5,999/night)</option>
+                <option value="Ocean View Suite">Ocean View Suite (₹9,999/night)</option>
+                <option value="Private Villa">Private Villa (₹14,999/night)</option>
+                <option value="Family Suite">Family Suite (₹11,999/night)</option>
+              </select>
+            </div>
+
+            <!-- Dates Grid -->
+            <div class="grid-2" style="gap: 20px;">
+              <div class="form-group">
+                <label class="form-label" for="checkIn">Check-in Date *</label>
+                <input type="date" id="checkIn" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="checkOut">Check-out Date *</label>
+                <input type="date" id="checkOut" class="form-control" required>
+              </div>
+            </div>
+
+            <!-- Number of Guests -->
+            <div class="form-group">
+              <label class="form-label" for="guests">Number of Guests *</label>
+              <select id="guests" class="form-control" required>
+                <option value="1 Adult">1 Adult</option>
+                <option value="2 Adults" selected>2 Adults</option>
+                <option value="2 Adults, 1 Child">2 Adults, 1 Child</option>
+                <option value="3 Adults">3 Adults</option>
+                <option value="4 Adults (Suite / Villa)">4 Adults (Suite / Villa)</option>
+                <option value="Family (Up to 6 Guests)">Family (Up to 6 Guests)</option>
+              </select>
+            </div>
+
+            <!-- Special Requests -->
+            <div class="form-group">
+              <label class="form-label" for="specialRequests">Special Requests (Optional)</label>
+              <textarea id="specialRequests" class="form-control" placeholder="e.g. Airport limousine pickup, high floor preference, honeymoon floral arrangement, vegan dietary preferences..."></textarea>
+            </div>
+
+            <!-- Booking Privileges Notice -->
+            <div style="background: var(--color-sand); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 24px; font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.6;">
+              🔒 <strong>Direct Booking Guarantee:</strong> No immediate credit card charge required. Free cancellation up to 48 hours prior to arrival. Our reservation concierge will confirm your request within 2 hours.
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="confirmBookingBtn" class="btn btn-primary btn-full" style="padding: 16px; font-size: 1.05rem;">
+              Confirm Booking
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Live Cost Estimator Summary Card -->
+        <div class="booking-summary-card reveal">
+          <h3 class="booking-summary-title">Reservation Summary</h3>
+          
+          <div style="margin-bottom: 20px; font-size: 0.88rem; color: rgba(255, 255, 255, 0.75);">
+            Live rate calculation based on your selected room and vacation dates:
+          </div>
+
+          <div class="summary-row">
+            <span>Selected Accommodation:</span>
+            <strong id="summaryRoom" style="color: var(--color-gold-light);">Deluxe Room</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Room Base Rate:</span>
+            <strong id="summaryRate">₹5,999</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Stay Duration:</span>
+            <strong id="summaryNights">1 Night</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Luxury Hospitality Tax (12%):</span>
+            <span>Included in estimate</span>
+          </div>
+
+          <div class="summary-row total-row">
+            <span>Estimated Total:</span>
+            <span class="total-amount" id="summaryTotal">₹6,719</span>
+          </div>
+
+          <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.15);">
+            <div style="font-size: 0.88rem; font-weight: 600; color: var(--color-gold-light); margin-bottom: 10px;">
+              Included Complimentary Privileges:
+            </div>
+            <ul style="font-size: 0.82rem; color: rgba(255, 255, 255, 0.8); line-height: 1.8;">
+              <li>✓ Daily Gourmet Breakfast Buffet</li>
+              <li>✓ Welcome Bottle of Chilled Wine or Sparkling Juice</li>
+              <li>✓ High-Speed Resort-Wide Wi-Fi</li>
+              <li>✓ Unlimited Access to Infinity Pool & Wellness Gym</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-crest">T</div>
+            <div class="logo-text">
+              <span class="logo-title">TRAVELIA</span>
+              <span class="logo-subtitle">RESORTS</span>
+            </div>
+          </a>
+          <p class="footer-tagline">“Escape. Relax. Experience.”</p>
+          <p class="footer-desc">
+            A bespoke collection of international luxury sanctuaries, offering timeless architecture, restorative wellness, and authentic hospitality across the globe.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+            <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+            <a href="#" class="social-icon" aria-label="Twitter">X</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms & Suites</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Services & Facilities</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Accommodations</h4>
+          <ul class="footer-links">
+            <li><a href="rooms.html">Deluxe Room</a></li>
+            <li><a href="rooms.html">Ocean View Suite</a></li>
+            <li><a href="rooms.html">Private Villa</a></li>
+            <li><a href="rooms.html">Family Suite</a></li>
+            <li><a href="booking.html">Direct Reservations</a></li>
+            <li><a href="#" class="logout-trigger">Member Logout</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="footer-contact-icon">📍</span>
+              <span>Travelia Bay Boulevard, Seaside Promenade, Goa & Worldwide</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">📞</span>
+              <span>+91 98765 43210 / 1800 233 4567</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">✉️</span>
+              <span>reservations@traveliaresorts.com</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">⏰</span>
+              <span>24/7 Front Desk & Concierge Service</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> Travelia Resorts. All Rights Reserved.</div>
+        <div>
+          <span>Privacy Policy</span> &bull; 
+          <span>Terms & Conditions</span> &bull; 
+          <span>Luxury Hospitality Standards</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">↑</button>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Check if room was passed via localStorage or query string
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryRoom = urlParams.get('room');
+      const savedRoom = localStorage.getItem('travelia_selected_room') || queryRoom;
+
+      if (savedRoom) {
+        const selectEl = document.getElementById('roomType');
+        if (selectEl) {
+          selectEl.value = savedRoom;
+          selectEl.dispatchEvent(new Event('change'));
+        }
+        const banner = document.getElementById('roomSelectedBanner');
+        const display = document.getElementById('selectedRoomDisplay');
+        if (banner && display) {
+          display.textContent = savedRoom;
+          banner.style.display = 'block';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
